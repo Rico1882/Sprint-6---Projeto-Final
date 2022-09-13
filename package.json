@@ -16,7 +16,6 @@
     "posttest": "npm run combine-reports && npm run generate-report",
     "test": "npm run scripts || npm run posttest"
   },
-  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Rico1882/Sprint_5_Compass.git"
