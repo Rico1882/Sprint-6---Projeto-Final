@@ -1,0 +1,220 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 5,
+    "passes": 1,
+    "pending": 0,
+    "failures": 4,
+    "start": "2022-09-12T16:44:14.771Z",
+    "end": "2022-09-12T16:44:20.594Z",
+    "duration": 5823,
+    "testsRegistered": 5,
+    "passPercent": 20,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c58ff518-180b-4385-a111-0d74dd28c8d1",
+      "title": "",
+      "fullFile": "cypress/integration/4.carrinhos.spec.js",
+      "file": "cypress/integration/4.carrinhos.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "0401fb1b-e6c2-4b23-968c-860d97098fa5",
+          "title": "Casos de teste sobre a rota /Carrinhos da API Serverest",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Deve buscar todos os carrinhos cadastrados na serverest",
+              "fullTitle": "Casos de teste sobre a rota /Carrinhos da API Serverest Deve buscar todos os carrinhos cadastrados na serverest",
+              "timedOut": null,
+              "duration": 354,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_serverest.default.buscarCarrinhos().then(res => {\n  cy.contractValidation(res, \"get-carrinhos\", 200);\n  _validaServerest.default.validarBuscaDeCarrinhos(res);\n});",
+              "err": {},
+              "uuid": "4ed6a6bd-5ecc-4a61-abc1-ef6e4919b870",
+              "parentUUID": "0401fb1b-e6c2-4b23-968c-860d97098fa5",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [
+            {
+              "uuid": "deee1726-1ea7-48ee-a7e5-21d1461d47d9",
+              "title": "Logar com sucesso",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Deve Criar um novo carrinho com sucesso",
+                  "fullTitle": "Casos de teste sobre a rota /Carrinhos da API Serverest Logar com sucesso Deve Criar um novo carrinho com sucesso",
+                  "timedOut": null,
+                  "duration": 1305,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "_serverest.default.cadastrarCarrinhoComSucesso().then(res => {\n  _validaServerest.default.validarCarrinhoComSucesso(res);\n});",
+                  "err": {
+                    "message": "AssertionError: expected undefined to be a string",
+                    "estack": "AssertionError: expected undefined to be a string\n    at Function.validarCarrinhoComSucesso (https://serverest.dev/__cypress/tests?p=cypress\\integration\\4.carrinhos.spec.js:403:37)\n    at Context.eval (https://serverest.dev/__cypress/tests?p=cypress\\integration\\4.carrinhos.spec.js:195:34)",
+                    "diff": null
+                  },
+                  "uuid": "978e54a5-545c-402e-aa3f-62191e274101",
+                  "parentUUID": "deee1726-1ea7-48ee-a7e5-21d1461d47d9",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Deve deletar um carrinho com sucesso - Concluir Compra",
+                  "fullTitle": "Casos de teste sobre a rota /Carrinhos da API Serverest Logar com sucesso Deve deletar um carrinho com sucesso - Concluir Compra",
+                  "timedOut": null,
+                  "duration": 1084,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "_serverest.default.deletarCarrinhoCadastrado_concluir().then(res => {\n  cy.contractValidation(res, \"delete-carrinhos-concluir-compra\", 200);\n  expect(res.body.message).to.be.equal('Registro excluído com sucesso'); // Código feito com participação de Regina Azzi e Vinivius Alexandre\n});",
+                  "err": {
+                    "message": "AssertionError: expected 'Não foi encontrado carrinho para esse usuário' to equal 'Registro excluído com sucesso'",
+                    "estack": "AssertionError: expected 'Não foi encontrado carrinho para esse usuário' to equal 'Registro excluído com sucesso'\n    at Context.eval (https://serverest.dev/__cypress/tests?p=cypress\\integration\\4.carrinhos.spec.js:201:40)",
+                    "diff": "- 'Não foi encontrado carrinho para esse usuário'\n+ 'Registro excluído com sucesso'\n"
+                  },
+                  "uuid": "4ee3c199-53f1-4d54-b941-20ed042a0902",
+                  "parentUUID": "deee1726-1ea7-48ee-a7e5-21d1461d47d9",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Deve Criar um novo carrinho com sucesso",
+                  "fullTitle": "Casos de teste sobre a rota /Carrinhos da API Serverest Logar com sucesso Deve Criar um novo carrinho com sucesso",
+                  "timedOut": null,
+                  "duration": 1276,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "_serverest.default.cadastrarCarrinhoComSucesso().then(res => {\n  _validaServerest.default.validarCarrinhoComSucesso(res);\n});",
+                  "err": {
+                    "message": "AssertionError: expected undefined to be a string",
+                    "estack": "AssertionError: expected undefined to be a string\n    at Function.validarCarrinhoComSucesso (https://serverest.dev/__cypress/tests?p=cypress\\integration\\4.carrinhos.spec.js:403:37)\n    at Context.eval (https://serverest.dev/__cypress/tests?p=cypress\\integration\\4.carrinhos.spec.js:206:34)",
+                    "diff": null
+                  },
+                  "uuid": "6e483303-2b64-4be0-951a-b00b42859e2b",
+                  "parentUUID": "deee1726-1ea7-48ee-a7e5-21d1461d47d9",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Deve deletar um carrinho com sucesso - Cancelar Compra",
+                  "fullTitle": "Casos de teste sobre a rota /Carrinhos da API Serverest Logar com sucesso Deve deletar um carrinho com sucesso - Cancelar Compra",
+                  "timedOut": null,
+                  "duration": 1404,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "_serverest.default.deletarCarrinhoCadastrado_cancelar().then(res => {\n  cy.contractValidation(res, \"delete-carrinhos-cancelar-compra\", 200);\n  expect(res.body.message).to.be.equal('Registro excluído com sucesso. Estoque dos produtos reabastecido'); // Código feito com participação de Regina Azzi e Vinivius Alexandre\n});",
+                  "err": {
+                    "message": "AssertionError: expected 'Não foi encontrado carrinho para esse usuário' to equal 'Registro excluído com sucesso. Estoque dos produtos reabastecido'",
+                    "estack": "AssertionError: expected 'Não foi encontrado carrinho para esse usuário' to equal 'Registro excluído com sucesso. Estoque dos produtos reabastecido'\n    at Context.eval (https://serverest.dev/__cypress/tests?p=cypress\\integration\\4.carrinhos.spec.js:212:40)",
+                    "diff": "- 'Não foi encontrado carrinho para esse usuário'\n+ 'Registro excluído com sucesso. Estoque dos produtos reabastecido'\n"
+                  },
+                  "uuid": "3f2e686a-d4bf-4669-bab2-0f3eb82f8995",
+                  "parentUUID": "deee1726-1ea7-48ee-a7e5-21d1461d47d9",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [],
+              "failures": [
+                "978e54a5-545c-402e-aa3f-62191e274101",
+                "4ee3c199-53f1-4d54-b941-20ed042a0902",
+                "6e483303-2b64-4be0-951a-b00b42859e2b",
+                "3f2e686a-d4bf-4669-bab2-0f3eb82f8995"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 5069,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [
+            "4ed6a6bd-5ecc-4a61-abc1-ef6e4919b870"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 354,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

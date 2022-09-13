@@ -1,0 +1,126 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-09-12T16:43:51.722Z",
+    "end": "2022-09-12T16:43:52.571Z",
+    "duration": 849,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "67c1999a-ac71-41d6-8faf-70519dfa8a4a",
+      "title": "",
+      "fullFile": "cypress/integration/2.login.spec.js",
+      "file": "cypress/integration/2.login.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "4a184a23-82ed-4bba-bd0a-cd7ee717119e",
+          "title": "Casos de teste sobre a rota /login da API Serverest",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Deve realizar login com suscesso",
+              "fullTitle": "Casos de teste sobre a rota /login da API Serverest Deve realizar login com suscesso",
+              "timedOut": null,
+              "duration": 473,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_serverest.default.buscarUsuariosParaLogin();\ncy.get('@usuarioLogin').then(usuario => {\n  _serverest.default.logar(usuario).then(res => {\n    _validaServerest.default.validaLoginComSucesso(res);\n    _serverest.default.salvarBearer(res);\n  });\n});",
+              "err": {},
+              "uuid": "a906f87b-189e-4313-b82d-f8022e6d1cee",
+              "parentUUID": "4a184a23-82ed-4bba-bd0a-cd7ee717119e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve realizar login sem suscesso",
+              "fullTitle": "Casos de teste sobre a rota /login da API Serverest Deve realizar login sem suscesso",
+              "timedOut": null,
+              "duration": 347,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.loginSemSucesso().then(res => {\n  cy.contractValidation(res, \"get-login\", 401); //login com email e senha invalidos          \n  _validaServerest.default.validaLoginSemSucesso(res);\n});",
+              "err": {},
+              "uuid": "bd2beded-cb13-4ee4-be9c-118327607bcc",
+              "parentUUID": "4a184a23-82ed-4bba-bd0a-cd7ee717119e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a906f87b-189e-4313-b82d-f8022e6d1cee",
+            "bd2beded-cb13-4ee4-be9c-118327607bcc"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 820,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

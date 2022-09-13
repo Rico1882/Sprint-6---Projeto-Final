@@ -1,0 +1,183 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-09-12T16:43:40.796Z",
+    "end": "2022-09-12T16:43:42.491Z",
+    "duration": 1695,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "99da990b-0069-46a5-89bb-e598e0576a1c",
+      "title": "",
+      "fullFile": "cypress/integration/1.usuarios.spec.js",
+      "file": "cypress/integration/1.usuarios.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "63deab9d-9ba2-4881-b314-1e0d89e64b30",
+          "title": "Casos de teste sobre a rota /usuarios da API Serverest",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Deve buscar todos os usuarios cadastrados na serverest",
+              "fullTitle": "Casos de teste sobre a rota /usuarios da API Serverest Deve buscar todos os usuarios cadastrados na serverest",
+              "timedOut": null,
+              "duration": 621,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_serverest.default.buscarUsuarios().then(res => {\n  cy.log('Será validado o contrato');\n  cy.contractValidation(res, \"get-usuarios\", 200);\n  _validaServerest.default.validarBuscaDeUsuarios(res);\n});",
+              "err": {},
+              "uuid": "cc8b9981-32bc-49f8-a438-f70ebe796fb7",
+              "parentUUID": "63deab9d-9ba2-4881-b314-1e0d89e64b30",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Não deve postar um novo usuário administrador existente",
+              "fullTitle": "Casos de teste sobre a rota /usuarios da API Serverest Não deve postar um novo usuário administrador existente",
+              "timedOut": null,
+              "duration": 234,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.postarUsuarioSemSucesso().then(res => {\n  cy.contractValidation(res, \"post-usuarios\", 400);\n  expect(res.body.message).to.be.eq('Este email já está sendo usado');\n});",
+              "err": {},
+              "uuid": "8ac1fb99-4bf4-4cba-8609-ae44cc20b715",
+              "parentUUID": "63deab9d-9ba2-4881-b314-1e0d89e64b30",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve realizar login com suscesso",
+              "fullTitle": "Casos de teste sobre a rota /usuarios da API Serverest Deve realizar login com suscesso",
+              "timedOut": null,
+              "duration": 449,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_serverest.default.buscarUsuariosParaLogin();\ncy.get('@usuarioLogin').then(usuario => {\n  _serverest.default.logar(usuario).then(res => {\n    _validaServerest.default.validaLoginComSucesso(res);\n    _serverest.default.salvarBearer(res);\n  });\n});",
+              "err": {},
+              "uuid": "56582864-3716-4618-a182-64093dcd6bdc",
+              "parentUUID": "63deab9d-9ba2-4881-b314-1e0d89e64b30",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve buscar e salvar um usuário em um arquivo json",
+              "fullTitle": "Casos de teste sobre a rota /usuarios da API Serverest Deve buscar e salvar um usuário em um arquivo json",
+              "timedOut": null,
+              "duration": 266,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_serverest.default.buscarUsuarios().then(res => {\n  let qtd_usuarios = res.body.quantidade;\n  let inteiro = _factory.default.gerarInteiroAleatorio();\n  cy.writeFile('./cypress/fixtures/usuario.json', res.body.usuarios[inteiro]);\n  _validaServerest.default.validarBuscaDeUsuarios(res);\n});",
+              "err": {},
+              "uuid": "b9e25b95-a757-43ae-9263-cb7fc9750abe",
+              "parentUUID": "63deab9d-9ba2-4881-b314-1e0d89e64b30",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve buscar o usuário de uma arquivo json",
+              "fullTitle": "Casos de teste sobre a rota /usuarios da API Serverest Deve buscar o usuário de uma arquivo json",
+              "timedOut": null,
+              "duration": 73,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.fixture('usuario.json').then(json => {\n  let usuario = {\n    email: json.email,\n    password: json.password\n  };\n});",
+              "err": {},
+              "uuid": "32ca17f5-3154-430b-8441-8fba06dec092",
+              "parentUUID": "63deab9d-9ba2-4881-b314-1e0d89e64b30",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "cc8b9981-32bc-49f8-a438-f70ebe796fb7",
+            "8ac1fb99-4bf4-4cba-8609-ae44cc20b715",
+            "56582864-3716-4618-a182-64093dcd6bdc",
+            "b9e25b95-a757-43ae-9263-cb7fc9750abe",
+            "32ca17f5-3154-430b-8441-8fba06dec092"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1643,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
