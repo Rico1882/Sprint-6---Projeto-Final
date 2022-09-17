@@ -15,14 +15,7 @@ describe('Casos de teste sobre a rota /usuarios da API Serverest', () => {
         })      
     })
 
-    it('Não deve postar um novo usuário administrador existente', () => {
-        cy.postarUsuarioSemSucesso().then( res => {
-            cy.contractValidation(res, "post-usuarios", 400)
-            expect(res.body.message).to.be.eq('Este email já está sendo usado')
-        })      
-    })
-
-    it('Deve realizar login com suscesso', () => {
+        it('Deve realizar login com suscesso', () => {
         Serverest.buscarUsuariosParaLogin()
         cy.get('@usuarioLogin').then( usuario => {
                 Serverest.logar(usuario).then( res=> {
