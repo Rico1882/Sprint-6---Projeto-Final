@@ -8,7 +8,6 @@ describe('Casos de teste sobre a rota /usuarios da API Serverest', () => {
 
     it('Deve buscar todos os usuarios cadastrados na serverest', () => {
        Serverest.buscarUsuarios().then( res => {
-        cy.log('Será validado o contrato')
         cy.contractValidation(res, "get-usuarios", 200)
         ValidaServerest.validarBuscaDeUsuarios(res) 
             
