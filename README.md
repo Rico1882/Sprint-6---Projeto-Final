@@ -46,7 +46,7 @@ Para execução dos testes
 ```bash
 npm run cy:open:prod
 ```
-![Cenarios](https://user-images.githubusercontent.com/98894124/191385880-e80c6804-332c-445b-9f5a-8b207fce0f19.jpg) width= "300px"
+<img src="https://user-images.githubusercontent.com/98894124/191385880-e80c6804-332c-445b-9f5a-8b207fce0f19.jpg" alt="Cenarios" style="zoom: 50%;" /> 
 Para execução dos Reports
 ```bash
 npm run test 
@@ -91,5 +91,4 @@ Serão aceitas todas as contribuições que após análise sejam uma melhoria co
 ## License
 
 [![NPM](https://img.shields.io/apm/l/react)](https://github.com/Rico1882/LogicalForest_-Joao_Ricardo_Soares-_Compass/blob/Develop/license)
-
 
