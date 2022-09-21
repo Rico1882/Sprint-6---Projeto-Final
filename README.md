@@ -1,4 +1,4 @@
-# Sprint 6 - Projeto-Final - Compass <img src= "C:\Users\João Ricardo\Downloads\trofeu.png" Alt="trofeu" width="75px" />
+# Sprint 6 - Projeto Final - Compass <img src= "https://github.com/Rico1882/assets/blob/main/imagens/trofeu.jpg" Alt="trofeu" width="110px" />
 
 ## Sobre o Projeto Final - Compass-UOL - Programa de Bolsas
 
