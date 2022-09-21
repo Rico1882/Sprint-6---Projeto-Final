@@ -46,7 +46,7 @@ Para execução dos testes
 ```bash
 npm run cy:open:prod
 ```
-<img src="https://user-images.githubusercontent.com/98894124/191385880-e80c6804-332c-445b-9f5a-8b207fce0f19.jpg" alt="Cenarios" style="zoom: 50%;" /> 
+<img src="https://user-images.githubusercontent.com/98894124/191385880-e80c6804-332c-445b-9f5a-8b207fce0f19.jpg" alt="Cenarios" style="zoom: 40%;" /> 
 Para execução dos Reports
 ```bash
 npm run test 
