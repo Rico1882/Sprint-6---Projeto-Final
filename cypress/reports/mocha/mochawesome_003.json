@@ -5,9 +5,9 @@
     "passes": 3,
     "pending": 0,
     "failures": 0,
-    "start": "2022-09-27T23:07:51.339Z",
-    "end": "2022-09-27T23:07:53.331Z",
-    "duration": 1992,
+    "start": "2022-09-28T01:45:08.649Z",
+    "end": "2022-09-28T01:45:10.370Z",
+    "duration": 1721,
     "testsRegistered": 3,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "167f5253-cb34-4743-83b7-2b22a65a3c17",
+      "uuid": "3674f29c-8a0a-4a24-be2d-4401dfe0761e",
       "title": "",
       "fullFile": "cypress/integration/4.carrinhos.spec.js",
       "file": "cypress/integration/4.carrinhos.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "e2216dd6-a031-4cae-9e89-361c434089e4",
+          "uuid": "959a8e6d-7b2c-42c3-9896-cd10483a5260",
           "title": "Casos de teste sobre a rota /Carrinhos da API Serverest",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Deve buscar todos os carrinhos cadastrados na serverest",
               "fullTitle": "Casos de teste sobre a rota /Carrinhos da API Serverest Deve buscar todos os carrinhos cadastrados na serverest",
               "timedOut": null,
-              "duration": 390,
+              "duration": 319,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -47,15 +47,15 @@
               "context": null,
               "code": "_serverest.default.buscarCarrinhos().then(res => {\n  cy.contractValidation(res, \"get-carrinhos\", 200);\n  _validaServerest.default.validarBuscaDeCarrinhos(res);\n});",
               "err": {},
-              "uuid": "084cd0ff-6e40-4f04-942a-5173e7b99677",
-              "parentUUID": "e2216dd6-a031-4cae-9e89-361c434089e4",
+              "uuid": "36c1f894-24f9-4181-a352-45e9b53578d7",
+              "parentUUID": "959a8e6d-7b2c-42c3-9896-cd10483a5260",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [
             {
-              "uuid": "ab717d0b-9dd3-471f-befb-5255ed9d4ce9",
+              "uuid": "d3d5a872-1c82-4f40-99cb-5e61f892f0a1",
               "title": "Logar com sucesso",
               "fullFile": "",
               "file": "",
@@ -66,7 +66,7 @@
                   "title": "Deve Criar um novo carrinho com sucesso",
                   "fullTitle": "Casos de teste sobre a rota /Carrinhos da API Serverest Logar com sucesso Deve Criar um novo carrinho com sucesso",
                   "timedOut": null,
-                  "duration": 749,
+                  "duration": 663,
                   "state": "passed",
                   "speed": "fast",
                   "pass": true,
@@ -75,8 +75,8 @@
                   "context": null,
                   "code": "_serverest.default.cadastrarCarrinhoComSucesso().then(res => {\n  _validaServerest.default.validarCarrinhoComSucesso(res);\n});",
                   "err": {},
-                  "uuid": "4cdb6454-5eba-4b7d-8e32-9c74ade97626",
-                  "parentUUID": "ab717d0b-9dd3-471f-befb-5255ed9d4ce9",
+                  "uuid": "b265668a-7c8e-461d-a73b-8b24cf037ba0",
+                  "parentUUID": "d3d5a872-1c82-4f40-99cb-5e61f892f0a1",
                   "isHook": false,
                   "skipped": false
                 },
@@ -84,7 +84,7 @@
                   "title": "Deve deletar um carrinho com sucesso - Concluir Compra",
                   "fullTitle": "Casos de teste sobre a rota /Carrinhos da API Serverest Logar com sucesso Deve deletar um carrinho com sucesso - Concluir Compra",
                   "timedOut": null,
-                  "duration": 725,
+                  "duration": 652,
                   "state": "passed",
                   "speed": "fast",
                   "pass": true,
@@ -93,33 +93,33 @@
                   "context": null,
                   "code": "_serverest.default.deletarCarrinhoCadastrado_concluir().then(res => {\n  cy.contractValidation(res, \"delete-carrinhos-concluir-compra\", 200);\n  expect(res.body.message).to.be.equal('Registro excluído com sucesso'); // Código feito com participação de Regina Azzi e Vinivius Alexandre\n});",
                   "err": {},
-                  "uuid": "8f6abdac-cfcc-4564-89f9-69769b377f9e",
-                  "parentUUID": "ab717d0b-9dd3-471f-befb-5255ed9d4ce9",
+                  "uuid": "95517aec-f89d-4f50-91f3-f802d8e1aefc",
+                  "parentUUID": "d3d5a872-1c82-4f40-99cb-5e61f892f0a1",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "4cdb6454-5eba-4b7d-8e32-9c74ade97626",
-                "8f6abdac-cfcc-4564-89f9-69769b377f9e"
+                "b265668a-7c8e-461d-a73b-8b24cf037ba0",
+                "95517aec-f89d-4f50-91f3-f802d8e1aefc"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 1474,
+              "duration": 1315,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
             }
           ],
           "passes": [
-            "084cd0ff-6e40-4f04-942a-5173e7b99677"
+            "36c1f894-24f9-4181-a352-45e9b53578d7"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 390,
+          "duration": 319,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

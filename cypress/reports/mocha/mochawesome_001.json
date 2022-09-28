@@ -5,9 +5,9 @@
     "passes": 2,
     "pending": 0,
     "failures": 1,
-    "start": "2022-09-27T23:07:26.161Z",
-    "end": "2022-09-27T23:07:28.390Z",
-    "duration": 2229,
+    "start": "2022-09-28T01:44:44.901Z",
+    "end": "2022-09-28T01:44:46.907Z",
+    "duration": 2006,
     "testsRegistered": 3,
     "passPercent": 66.66666666666666,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "3cf22689-5c86-490d-bd5b-4207bc725d8e",
+      "uuid": "1d9a860d-246d-4366-b470-3dde188d6fde",
       "title": "",
       "fullFile": "cypress/integration/2.login.spec.js",
       "file": "cypress/integration/2.login.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "75ef14de-b729-4adf-9a9a-33624cd3fe81",
+          "uuid": "d9438504-090c-4e7c-897d-2a58fe4caa4f",
           "title": "Casos de teste sobre a rota /login da API Serverest",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Deve realizar login com email e senha corretos",
               "fullTitle": "Casos de teste sobre a rota /login da API Serverest Deve realizar login com email e senha corretos",
               "timedOut": null,
-              "duration": 698,
+              "duration": 637,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "_serverest.default.buscarUsuariosParaLogin();\ncy.get('@usuarioLogin').then(usuario => {\n  _serverest.default.logar(usuario).then(res => {\n    cy.contractValidation(res, \"post-login\", 200);\n    _validaServerest.default.validaLoginComSucesso(res);\n    _serverest.default.salvarBearer(res);\n  });\n});",
               "err": {},
-              "uuid": "a54464ee-6de5-4b68-a85c-a55a0b377c34",
-              "parentUUID": "75ef14de-b729-4adf-9a9a-33624cd3fe81",
+              "uuid": "873eca0b-7807-4046-8f7a-a34db2f67ef9",
+              "parentUUID": "d9438504-090c-4e7c-897d-2a58fe4caa4f",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "Não deve realizar login com email e senha incorretos",
               "fullTitle": "Casos de teste sobre a rota /login da API Serverest Não deve realizar login com email e senha incorretos",
               "timedOut": null,
-              "duration": 266,
+              "duration": 220,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -65,8 +65,8 @@
               "context": null,
               "code": "cy.loginSemSucesso().then(res => {\n  cy.contractValidation(res, \"post-login\", 400); //login com email e senha invalidos          \n  _validaServerest.default.validaLoginSemSucesso(res);\n});",
               "err": {},
-              "uuid": "db9722fb-0b67-4e7d-a072-f68cf53bc9a3",
-              "parentUUID": "75ef14de-b729-4adf-9a9a-33624cd3fe81",
+              "uuid": "30c1e2c1-6266-4c67-ab19-cfd209311865",
+              "parentUUID": "d9438504-090c-4e7c-897d-2a58fe4caa4f",
               "isHook": false,
               "skipped": false
             },
@@ -74,7 +74,7 @@
               "title": "Não deve realizar login com email e senha em branco",
               "fullTitle": "Casos de teste sobre a rota /login da API Serverest Não deve realizar login com email e senha em branco",
               "timedOut": null,
-              "duration": 998,
+              "duration": 970,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -87,23 +87,23 @@
                 "estack": "Error: Erros encontrados na validação do contrato, por favor verifique: \n must have required property 'message', but receive object\n    at Context.eval (https://serverest.dev/__cypress/tests?p=cypress\\support\\index.js:159:13)",
                 "diff": null
               },
-              "uuid": "d1960200-5b33-419e-a78a-72f57daeace1",
-              "parentUUID": "75ef14de-b729-4adf-9a9a-33624cd3fe81",
+              "uuid": "1e5b7a98-45a1-4cf9-9411-946dbda83484",
+              "parentUUID": "d9438504-090c-4e7c-897d-2a58fe4caa4f",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "a54464ee-6de5-4b68-a85c-a55a0b377c34",
-            "db9722fb-0b67-4e7d-a072-f68cf53bc9a3"
+            "873eca0b-7807-4046-8f7a-a34db2f67ef9",
+            "30c1e2c1-6266-4c67-ab19-cfd209311865"
           ],
           "failures": [
-            "d1960200-5b33-419e-a78a-72f57daeace1"
+            "1e5b7a98-45a1-4cf9-9411-946dbda83484"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 1962,
+          "duration": 1827,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
