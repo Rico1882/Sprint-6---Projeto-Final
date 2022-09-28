@@ -52,6 +52,7 @@ Para execução dos Reports
 ```bash
 npm run test 
 ```
+<img src="https://github.com/Rico1882/assets/blob/main/imagens/Captura%20de%20tela%202022-09-27%20214729.jpg" alt="Reports" width="350px" /> 
 
 ## Deployment
 
@@ -65,25 +66,28 @@ git push origin main:main
 
 ## **Tecnologias Utilizadas**
 
-### **Construção do Código**
++ Jira  Software  (para  gerenciamento  dos testes).
++ Zephyr  (extensão  do  Jira  para  criação  e execução de cenários de teste).
++ Pacote   Office   (para   elaboração   da documentação de testes).
++ Microsoft Teams (para as comunicações);E-mail 365 (para as formalizações por e-mail).
++ Visual  Studio  Code  (IDE  para  a  criação  do código da automação de testes).
++ Cypress (framework para a automação).
++ JavaScript  (linguagem  de  programação  para realizar a automação de testes).
++ Postman  (ferramenta  para  interagir  com  as rotas de API da aplicação).
++ GitHub  (para  versionamento  do  código  da automação).
++ Node.js (sofware que permite a execução do javascript).
++ Mochasome (Ferramenta para gerar Report).
 
-+ ####  <u>Javascript</u> - Linguagem de programação interpretada estruturada, de script em alto nível com tipagem dinâmica fraca e multiparadigma.
-+ ####  <u>Node.js</u> - Software de código aberto, multiplataforma,permite a execução de códigos JavaScript fora de um navegador web.
 
-
-
-### **Construção dos teste**
-
-+ #### <u>Mocha</u> - Estrutura de teste JavaScript para programas Node.js., com suporte ao navegador, testes assíncronos, relatórios de cobertura de testes e uso de qualquer biblioteca de asserções.
-+ #### <u>Chai</u> - Lib baseada em BDD/TDD para NodeJS e também para browser que pode ser combinada com qualquer Framework deve testes JavaScript.
 
 ### **IDE**
 
 + #### **<u>VS Code</u>** - Editor de código-fonte desenvolvido pela Microsoft para Windows, Linux e macOS.
 
-## Contribuição
+## Contribuintes
 
-Serão aceitas todas as contribuições que após análise sejam uma melhoria conforme intuíto do projeto.
++ Regina Azzi
++ Vinicius Alexandre
 
 ## Autores
 
