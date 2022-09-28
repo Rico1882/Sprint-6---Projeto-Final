@@ -52,6 +52,7 @@ Para execução dos Reports
 ```bash
 npm run test 
 ```
+<img src="https://github.com/Rico1882/assets/blob/main/imagens/Captura%20de%20tela%202022-09-27%20214729.jpg" alt="Reports" width="350px" /> 
 
 ## Deployment
 
