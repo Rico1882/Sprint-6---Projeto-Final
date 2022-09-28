@@ -98,3 +98,18 @@ Cypress.Commands.add('loginSemSucesso', () =>{
 
     })
 })
+
+Cypress.Commands.add('loginComEmailBranco', () =>{
+    return cy.request({
+        method: 'POST',
+        url: '/login',
+        failOnStatusCode: false,
+        body: {
+            "email": "",
+            "password": "" 
+        }
+
+    })
+})
+
+

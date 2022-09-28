@@ -6,12 +6,12 @@ import ValidaServerest from '../services/validaServerest.service'
 
 describe('Casos de teste sobre a rota /Carrinhos da API Serverest', () => {
 
-   //it('Deve buscar todos os carrinhos cadastrados na serverest', () => {
-    //    Serverest.buscarCarrinhos().then( res => {
-    //       cy.contractValidation(res, "get-carrinhos", 200)
-     //       ValidaServerest.validarBuscaDeCarrinhos(res) 
-     //   })
-      //  })
+   it('Deve buscar todos os carrinhos cadastrados na serverest', () => {
+        Serverest.buscarCarrinhos().then( res => {
+           cy.contractValidation(res, "get-carrinhos", 200)
+            ValidaServerest.validarBuscaDeCarrinhos(res) 
+        })
+        })
     
     
     context('Logar com sucesso', () => {

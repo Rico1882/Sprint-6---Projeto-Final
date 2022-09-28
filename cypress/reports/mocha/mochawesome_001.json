@@ -1,15 +1,15 @@
 {
   "stats": {
     "suites": 1,
-    "tests": 2,
+    "tests": 3,
     "passes": 2,
     "pending": 0,
-    "failures": 0,
-    "start": "2022-09-13T20:28:23.233Z",
-    "end": "2022-09-13T20:28:24.131Z",
-    "duration": 898,
-    "testsRegistered": 2,
-    "passPercent": 100,
+    "failures": 1,
+    "start": "2022-09-27T23:07:26.161Z",
+    "end": "2022-09-27T23:07:28.390Z",
+    "duration": 2229,
+    "testsRegistered": 3,
+    "passPercent": 66.66666666666666,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "134b74d7-2d57-4858-8ae6-6938df53e419",
+      "uuid": "3cf22689-5c86-490d-bd5b-4207bc725d8e",
       "title": "",
       "fullFile": "cypress/integration/2.login.spec.js",
       "file": "cypress/integration/2.login.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "cfd0498e-27d9-493c-847a-1de9f1f70e67",
+          "uuid": "75ef14de-b729-4adf-9a9a-33624cd3fe81",
           "title": "Casos de teste sobre a rota /login da API Serverest",
           "fullFile": "",
           "file": "",
@@ -35,51 +35,75 @@
           "afterHooks": [],
           "tests": [
             {
-              "title": "Deve realizar login com suscesso",
-              "fullTitle": "Casos de teste sobre a rota /login da API Serverest Deve realizar login com suscesso",
+              "title": "Deve realizar login com email e senha corretos",
+              "fullTitle": "Casos de teste sobre a rota /login da API Serverest Deve realizar login com email e senha corretos",
               "timedOut": null,
-              "duration": 516,
+              "duration": 698,
               "state": "passed",
               "speed": "fast",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "_serverest.default.buscarUsuariosParaLogin();\ncy.get('@usuarioLogin').then(usuario => {\n  _serverest.default.logar(usuario).then(res => {\n    _validaServerest.default.validaLoginComSucesso(res);\n    _serverest.default.salvarBearer(res);\n  });\n});",
+              "code": "_serverest.default.buscarUsuariosParaLogin();\ncy.get('@usuarioLogin').then(usuario => {\n  _serverest.default.logar(usuario).then(res => {\n    cy.contractValidation(res, \"post-login\", 200);\n    _validaServerest.default.validaLoginComSucesso(res);\n    _serverest.default.salvarBearer(res);\n  });\n});",
               "err": {},
-              "uuid": "53ea9af0-4069-46d0-9215-80f75dcfc172",
-              "parentUUID": "cfd0498e-27d9-493c-847a-1de9f1f70e67",
+              "uuid": "a54464ee-6de5-4b68-a85c-a55a0b377c34",
+              "parentUUID": "75ef14de-b729-4adf-9a9a-33624cd3fe81",
               "isHook": false,
               "skipped": false
             },
             {
-              "title": "Deve realizar login sem suscesso",
-              "fullTitle": "Casos de teste sobre a rota /login da API Serverest Deve realizar login sem suscesso",
+              "title": "Não deve realizar login com email e senha incorretos",
+              "fullTitle": "Casos de teste sobre a rota /login da API Serverest Não deve realizar login com email e senha incorretos",
               "timedOut": null,
-              "duration": 297,
+              "duration": 266,
               "state": "passed",
               "speed": "fast",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "cy.loginSemSucesso().then(res => {\n  cy.contractValidation(res, \"get-login\", 401); //login com email e senha invalidos          \n  _validaServerest.default.validaLoginSemSucesso(res);\n});",
+              "code": "cy.loginSemSucesso().then(res => {\n  cy.contractValidation(res, \"post-login\", 400); //login com email e senha invalidos          \n  _validaServerest.default.validaLoginSemSucesso(res);\n});",
               "err": {},
-              "uuid": "4058dc86-e078-4150-8cc8-1ca10bd70710",
-              "parentUUID": "cfd0498e-27d9-493c-847a-1de9f1f70e67",
+              "uuid": "db9722fb-0b67-4e7d-a072-f68cf53bc9a3",
+              "parentUUID": "75ef14de-b729-4adf-9a9a-33624cd3fe81",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Não deve realizar login com email e senha em branco",
+              "fullTitle": "Casos de teste sobre a rota /login da API Serverest Não deve realizar login com email e senha em branco",
+              "timedOut": null,
+              "duration": 998,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.loginComEmailBranco().then(res => {\n  cy.contractValidation(res, \"post-login\", 400); //login com email e senha invalidos          \n  expect(res.body.message).to.be.undefined;\n});",
+              "err": {
+                "message": "Error: Erros encontrados na validação do contrato, por favor verifique: \n must have required property 'message', but receive object",
+                "estack": "Error: Erros encontrados na validação do contrato, por favor verifique: \n must have required property 'message', but receive object\n    at Context.eval (https://serverest.dev/__cypress/tests?p=cypress\\support\\index.js:159:13)",
+                "diff": null
+              },
+              "uuid": "d1960200-5b33-419e-a78a-72f57daeace1",
+              "parentUUID": "75ef14de-b729-4adf-9a9a-33624cd3fe81",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "53ea9af0-4069-46d0-9215-80f75dcfc172",
-            "4058dc86-e078-4150-8cc8-1ca10bd70710"
+            "a54464ee-6de5-4b68-a85c-a55a0b377c34",
+            "db9722fb-0b67-4e7d-a072-f68cf53bc9a3"
           ],
-          "failures": [],
+          "failures": [
+            "d1960200-5b33-419e-a78a-72f57daeace1"
+          ],
           "pending": [],
           "skipped": [],
-          "duration": 813,
+          "duration": 1962,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

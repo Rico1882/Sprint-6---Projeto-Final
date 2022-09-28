@@ -1,14 +1,14 @@
 {
   "stats": {
     "suites": 2,
-    "tests": 3,
-    "passes": 3,
+    "tests": 4,
+    "passes": 4,
     "pending": 0,
     "failures": 0,
-    "start": "2022-09-13T20:28:35.677Z",
-    "end": "2022-09-13T20:28:37.367Z",
-    "duration": 1690,
-    "testsRegistered": 3,
+    "start": "2022-09-27T23:07:38.704Z",
+    "end": "2022-09-27T23:07:41.490Z",
+    "duration": 2786,
+    "testsRegistered": 4,
     "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "8d8b8c2a-9b01-49b0-8d0b-40feee07fcbb",
+      "uuid": "0407abc7-35fd-4d55-bf14-b15eedf57a54",
       "title": "",
       "fullFile": "cypress/integration/3.produtos.spec.js",
       "file": "cypress/integration/3.produtos.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "dfa12f11-9104-443e-8235-81c93d7df837",
+          "uuid": "c4460e7d-8c58-4c59-90f2-c8a981d1d135",
           "title": "Casos de teste sobre a rota /produtos da API Serverest",
           "fullFile": "",
           "file": "",
@@ -35,10 +35,10 @@
           "afterHooks": [],
           "tests": [
             {
-              "title": "Deve buscar todos os produtos cadastrados",
-              "fullTitle": "Casos de teste sobre a rota /produtos da API Serverest Deve buscar todos os produtos cadastrados",
+              "title": "Deve Buscar todos os produtos cadastrados",
+              "fullTitle": "Casos de teste sobre a rota /produtos da API Serverest Deve Buscar todos os produtos cadastrados",
               "timedOut": null,
-              "duration": 349,
+              "duration": 339,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -47,15 +47,15 @@
               "context": null,
               "code": "_serverest.default.buscarProdutos().then(res => {\n  _validaServerest.default.validarBuscaDeProdutos(res);\n});",
               "err": {},
-              "uuid": "ff4d1b1f-7323-4cfc-afb3-4c9783bf6092",
-              "parentUUID": "dfa12f11-9104-443e-8235-81c93d7df837",
+              "uuid": "7e5155c2-6bf5-4568-8fc0-a3a1e052afd8",
+              "parentUUID": "c4460e7d-8c58-4c59-90f2-c8a981d1d135",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [
             {
-              "uuid": "9fb18568-da8e-43f9-aad1-ae4ae467981e",
+              "uuid": "c0c494c7-490c-44c4-942a-31e4b2ed4494",
               "title": "Logar com sucesso",
               "fullFile": "",
               "file": "",
@@ -63,63 +63,82 @@
               "afterHooks": [],
               "tests": [
                 {
-                  "title": "Deve postar um novo produto com sucesso",
-                  "fullTitle": "Casos de teste sobre a rota /produtos da API Serverest Logar com sucesso Deve postar um novo produto com sucesso",
+                  "title": "Deve Cadastrar um novo produto com sucesso",
+                  "fullTitle": "Casos de teste sobre a rota /produtos da API Serverest Logar com sucesso Deve Cadastrar um novo produto com sucesso",
                   "timedOut": null,
-                  "duration": 581,
+                  "duration": 851,
                   "state": "passed",
                   "speed": "fast",
                   "pass": true,
                   "fail": false,
                   "pending": false,
                   "context": null,
-                  "code": "_serverest.default.cadastrarProdutoComSucesso().then(res => {\n  _validaServerest.default.validarCadastroDeProdutoComSucesso(res);\n});",
+                  "code": "_serverest.default.cadastrarProdutoComSucesso().then(res => {\n  cy.contractValidation(res, 'post-produtos', 201);\n  _validaServerest.default.validarCadastroDeProdutoComSucesso(res);\n});",
                   "err": {},
-                  "uuid": "7f0a3b30-9405-44e4-85f4-709d3792d906",
-                  "parentUUID": "9fb18568-da8e-43f9-aad1-ae4ae467981e",
+                  "uuid": "3b6e9188-cb5a-4212-b03c-05403f656d28",
+                  "parentUUID": "c0c494c7-490c-44c4-942a-31e4b2ed4494",
                   "isHook": false,
                   "skipped": false
                 },
                 {
-                  "title": "Deve deletar um produto com sucesso",
-                  "fullTitle": "Casos de teste sobre a rota /produtos da API Serverest Logar com sucesso Deve deletar um produto com sucesso",
+                  "title": "Deve Buscar produto por id",
+                  "fullTitle": "Casos de teste sobre a rota /produtos da API Serverest Logar com sucesso Deve Buscar produto por id",
                   "timedOut": null,
-                  "duration": 655,
+                  "duration": 729,
                   "state": "passed",
                   "speed": "fast",
                   "pass": true,
                   "fail": false,
                   "pending": false,
                   "context": null,
-                  "code": "_serverest.default.deletarProdutoCadastrado().then(res => {\n  cy.contractValidation(res, \"delete-produtos{_id}\", 200);\n  expect(res.body.message).to.be.equal('Registro excluído com sucesso');\n});",
+                  "code": "_serverest.default.buscarProdutoPorId().then(res => {\n  cy.contractValidation(res, 'get-produtos', 200);\n  _validaServerest.default.validarBuscaDeProdutosPorId(res);\n});",
                   "err": {},
-                  "uuid": "1536b879-4dd8-4352-adfb-931243469e05",
-                  "parentUUID": "9fb18568-da8e-43f9-aad1-ae4ae467981e",
+                  "uuid": "0c6a7742-872c-4e35-8f5e-2b2ba7a02160",
+                  "parentUUID": "c0c494c7-490c-44c4-942a-31e4b2ed4494",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Deve Alterar um produto por id",
+                  "fullTitle": "Casos de teste sobre a rota /produtos da API Serverest Logar com sucesso Deve Alterar um produto por id",
+                  "timedOut": null,
+                  "duration": 742,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "_serverest.default.editarProdutoPorId().then(res => {\n  expect(res.body.message).to.be.equal('Registro alterado com sucesso');\n});",
+                  "err": {},
+                  "uuid": "b0c9761f-4534-4a92-af09-4616372d1323",
+                  "parentUUID": "c0c494c7-490c-44c4-942a-31e4b2ed4494",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "7f0a3b30-9405-44e4-85f4-709d3792d906",
-                "1536b879-4dd8-4352-adfb-931243469e05"
+                "3b6e9188-cb5a-4212-b03c-05403f656d28",
+                "0c6a7742-872c-4e35-8f5e-2b2ba7a02160",
+                "b0c9761f-4534-4a92-af09-4616372d1323"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 1236,
+              "duration": 2322,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
             }
           ],
           "passes": [
-            "ff4d1b1f-7323-4cfc-afb3-4c9783bf6092"
+            "7e5155c2-6bf5-4568-8fc0-a3a1e052afd8"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 349,
+          "duration": 339,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

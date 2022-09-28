@@ -1,3 +1,4 @@
+
 import Factory from '../fixtures/factory'
 
 const URL_USUARIOS  = '/usuarios'
@@ -29,8 +30,6 @@ export default class Serverest {
        
     }
 
-    //produtos//
-
     static buscarProdutos(){
         return cy.rest('GET', URL_PRODUTOS)
     }
@@ -52,7 +51,64 @@ export default class Serverest {
         return cy.rest('GET', URL_CARRINHOS)
     }
 
- 
+    static buscarProdutoPorId(){
+        return cy.request({
+            method:'GET',
+            url: `${URL_PRODUTOS}/${Cypress.env('idProdutoCadastrado')}`
+        })
+    }
+
+    static editarProdutoPorId(){
+        let produto = Factory.gerarProduto()
+        return cy.request({
+            method:'PUT',
+            url: `${URL_PRODUTOS}/${Cypress.env('idProdutoCadastrado')}`,
+            body:produto,
+            failOnStatusCode: false,
+            auth: {
+                bearer: Cypress.env("bearer") 
+
+            }
+        })
+    }
+
+    static EditarUsuarioComSucesso() {
+        let usuario = Factory.gerarUsuario()
+        return cy.request({
+            method: 'PUT',
+            url: `${URL_USUARIOS}/${Cypress.env('idUsuarioCadastrado')}`,
+            body: usuario,
+            failOnStatusCode: false
+       })
+}
+
+    static buscarUsuariosPorId() {
+        return cy.request({
+        method: 'GET',
+        url: `${URL_USUARIOS}/${Cypress.env('idUsuarioCadastrado')}`,
+        failOnStatusCode: false        
+    })
+}
+    static cadastrarUsuario(usuario) {
+        return cy.request({
+        method: 'POST',
+        url: '/usuarios',
+        body: usuario,
+        failOnStatusCode: false
+        
+})
+}
+
+    static BuscarUsuarioExistente(){
+    cy.request(URL_USUARIOS).then( res=> {cy.wrap({
+        nome:res.body.usuarios[0].nome,
+        email:res.body.usuarios[0].email,
+        password:res.body.usuarios[0].password,
+        administrador: res.body.usuarios[0].administrador
+    
+    }).as('usuarioExistente')
+    })
+}
     static deletarProdutoCadastrado () {
         return cy.request({
             method: 'DELETE',
