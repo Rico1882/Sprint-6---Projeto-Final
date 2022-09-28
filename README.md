@@ -73,18 +73,14 @@ git push origin main:main
 
 
 
-### **Construção dos teste**
-
-+ #### <u>Mocha</u> - Estrutura de teste JavaScript para programas Node.js., com suporte ao navegador, testes assíncronos, relatórios de cobertura de testes e uso de qualquer biblioteca de asserções.
-+ #### <u>Chai</u> - Lib baseada em BDD/TDD para NodeJS e também para browser que pode ser combinada com qualquer Framework deve testes JavaScript.
-
 ### **IDE**
 
 + #### **<u>VS Code</u>** - Editor de código-fonte desenvolvido pela Microsoft para Windows, Linux e macOS.
 
-## Contribuição
+## Contribuidores
 
-Serão aceitas todas as contribuições que após análise sejam uma melhoria conforme intuíto do projeto.
++ Regina Azzi
++ Vinicius Alexandre
 
 ## Autores
 
