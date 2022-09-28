@@ -1,0 +1,166 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-09-27T23:07:51.339Z",
+    "end": "2022-09-27T23:07:53.331Z",
+    "duration": 1992,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "167f5253-cb34-4743-83b7-2b22a65a3c17",
+      "title": "",
+      "fullFile": "cypress/integration/4.carrinhos.spec.js",
+      "file": "cypress/integration/4.carrinhos.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e2216dd6-a031-4cae-9e89-361c434089e4",
+          "title": "Casos de teste sobre a rota /Carrinhos da API Serverest",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Deve buscar todos os carrinhos cadastrados na serverest",
+              "fullTitle": "Casos de teste sobre a rota /Carrinhos da API Serverest Deve buscar todos os carrinhos cadastrados na serverest",
+              "timedOut": null,
+              "duration": 390,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_serverest.default.buscarCarrinhos().then(res => {\n  cy.contractValidation(res, \"get-carrinhos\", 200);\n  _validaServerest.default.validarBuscaDeCarrinhos(res);\n});",
+              "err": {},
+              "uuid": "084cd0ff-6e40-4f04-942a-5173e7b99677",
+              "parentUUID": "e2216dd6-a031-4cae-9e89-361c434089e4",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [
+            {
+              "uuid": "ab717d0b-9dd3-471f-befb-5255ed9d4ce9",
+              "title": "Logar com sucesso",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Deve Criar um novo carrinho com sucesso",
+                  "fullTitle": "Casos de teste sobre a rota /Carrinhos da API Serverest Logar com sucesso Deve Criar um novo carrinho com sucesso",
+                  "timedOut": null,
+                  "duration": 749,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "_serverest.default.cadastrarCarrinhoComSucesso().then(res => {\n  _validaServerest.default.validarCarrinhoComSucesso(res);\n});",
+                  "err": {},
+                  "uuid": "4cdb6454-5eba-4b7d-8e32-9c74ade97626",
+                  "parentUUID": "ab717d0b-9dd3-471f-befb-5255ed9d4ce9",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Deve deletar um carrinho com sucesso - Concluir Compra",
+                  "fullTitle": "Casos de teste sobre a rota /Carrinhos da API Serverest Logar com sucesso Deve deletar um carrinho com sucesso - Concluir Compra",
+                  "timedOut": null,
+                  "duration": 725,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "_serverest.default.deletarCarrinhoCadastrado_concluir().then(res => {\n  cy.contractValidation(res, \"delete-carrinhos-concluir-compra\", 200);\n  expect(res.body.message).to.be.equal('Registro excluído com sucesso'); // Código feito com participação de Regina Azzi e Vinivius Alexandre\n});",
+                  "err": {},
+                  "uuid": "8f6abdac-cfcc-4564-89f9-69769b377f9e",
+                  "parentUUID": "ab717d0b-9dd3-471f-befb-5255ed9d4ce9",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "4cdb6454-5eba-4b7d-8e32-9c74ade97626",
+                "8f6abdac-cfcc-4564-89f9-69769b377f9e"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 1474,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [
+            "084cd0ff-6e40-4f04-942a-5173e7b99677"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 390,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

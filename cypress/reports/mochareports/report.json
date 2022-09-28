@@ -1,0 +1,518 @@
+{
+  "stats": {
+    "suites": 4,
+    "tests": 14,
+    "passes": 13,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-09-27T23:07:13.539Z",
+    "end": "2022-09-27T23:07:53.331Z",
+    "duration": 8492,
+    "testsRegistered": 14,
+    "passPercent": 92.85714285714286,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "3cf22689-5c86-490d-bd5b-4207bc725d8e",
+      "title": "",
+      "fullFile": "cypress/integration/2.login.spec.js",
+      "file": "cypress/integration/2.login.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "75ef14de-b729-4adf-9a9a-33624cd3fe81",
+          "title": "Casos de teste sobre a rota /login da API Serverest",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Deve realizar login com email e senha corretos",
+              "fullTitle": "Casos de teste sobre a rota /login da API Serverest Deve realizar login com email e senha corretos",
+              "timedOut": null,
+              "duration": 698,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_serverest.default.buscarUsuariosParaLogin();\ncy.get('@usuarioLogin').then(usuario => {\n  _serverest.default.logar(usuario).then(res => {\n    cy.contractValidation(res, \"post-login\", 200);\n    _validaServerest.default.validaLoginComSucesso(res);\n    _serverest.default.salvarBearer(res);\n  });\n});",
+              "err": {},
+              "uuid": "a54464ee-6de5-4b68-a85c-a55a0b377c34",
+              "parentUUID": "75ef14de-b729-4adf-9a9a-33624cd3fe81",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Não deve realizar login com email e senha incorretos",
+              "fullTitle": "Casos de teste sobre a rota /login da API Serverest Não deve realizar login com email e senha incorretos",
+              "timedOut": null,
+              "duration": 266,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.loginSemSucesso().then(res => {\n  cy.contractValidation(res, \"post-login\", 400); //login com email e senha invalidos          \n  _validaServerest.default.validaLoginSemSucesso(res);\n});",
+              "err": {},
+              "uuid": "db9722fb-0b67-4e7d-a072-f68cf53bc9a3",
+              "parentUUID": "75ef14de-b729-4adf-9a9a-33624cd3fe81",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Não deve realizar login com email e senha em branco",
+              "fullTitle": "Casos de teste sobre a rota /login da API Serverest Não deve realizar login com email e senha em branco",
+              "timedOut": null,
+              "duration": 998,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.loginComEmailBranco().then(res => {\n  cy.contractValidation(res, \"post-login\", 400); //login com email e senha invalidos          \n  expect(res.body.message).to.be.undefined;\n});",
+              "err": {
+                "message": "Error: Erros encontrados na validação do contrato, por favor verifique: \n must have required property 'message', but receive object",
+                "estack": "Error: Erros encontrados na validação do contrato, por favor verifique: \n must have required property 'message', but receive object\n    at Context.eval (https://serverest.dev/__cypress/tests?p=cypress\\support\\index.js:159:13)",
+                "diff": null
+              },
+              "uuid": "d1960200-5b33-419e-a78a-72f57daeace1",
+              "parentUUID": "75ef14de-b729-4adf-9a9a-33624cd3fe81",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a54464ee-6de5-4b68-a85c-a55a0b377c34",
+            "db9722fb-0b67-4e7d-a072-f68cf53bc9a3"
+          ],
+          "failures": [
+            "d1960200-5b33-419e-a78a-72f57daeace1"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 1962,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "0407abc7-35fd-4d55-bf14-b15eedf57a54",
+      "title": "",
+      "fullFile": "cypress/integration/3.produtos.spec.js",
+      "file": "cypress/integration/3.produtos.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c4460e7d-8c58-4c59-90f2-c8a981d1d135",
+          "title": "Casos de teste sobre a rota /produtos da API Serverest",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Deve Buscar todos os produtos cadastrados",
+              "fullTitle": "Casos de teste sobre a rota /produtos da API Serverest Deve Buscar todos os produtos cadastrados",
+              "timedOut": null,
+              "duration": 339,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_serverest.default.buscarProdutos().then(res => {\n  _validaServerest.default.validarBuscaDeProdutos(res);\n});",
+              "err": {},
+              "uuid": "7e5155c2-6bf5-4568-8fc0-a3a1e052afd8",
+              "parentUUID": "c4460e7d-8c58-4c59-90f2-c8a981d1d135",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [
+            {
+              "uuid": "c0c494c7-490c-44c4-942a-31e4b2ed4494",
+              "title": "Logar com sucesso",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Deve Cadastrar um novo produto com sucesso",
+                  "fullTitle": "Casos de teste sobre a rota /produtos da API Serverest Logar com sucesso Deve Cadastrar um novo produto com sucesso",
+                  "timedOut": null,
+                  "duration": 851,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "_serverest.default.cadastrarProdutoComSucesso().then(res => {\n  cy.contractValidation(res, 'post-produtos', 201);\n  _validaServerest.default.validarCadastroDeProdutoComSucesso(res);\n});",
+                  "err": {},
+                  "uuid": "3b6e9188-cb5a-4212-b03c-05403f656d28",
+                  "parentUUID": "c0c494c7-490c-44c4-942a-31e4b2ed4494",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Deve Buscar produto por id",
+                  "fullTitle": "Casos de teste sobre a rota /produtos da API Serverest Logar com sucesso Deve Buscar produto por id",
+                  "timedOut": null,
+                  "duration": 729,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "_serverest.default.buscarProdutoPorId().then(res => {\n  cy.contractValidation(res, 'get-produtos', 200);\n  _validaServerest.default.validarBuscaDeProdutosPorId(res);\n});",
+                  "err": {},
+                  "uuid": "0c6a7742-872c-4e35-8f5e-2b2ba7a02160",
+                  "parentUUID": "c0c494c7-490c-44c4-942a-31e4b2ed4494",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Deve Alterar um produto por id",
+                  "fullTitle": "Casos de teste sobre a rota /produtos da API Serverest Logar com sucesso Deve Alterar um produto por id",
+                  "timedOut": null,
+                  "duration": 742,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "_serverest.default.editarProdutoPorId().then(res => {\n  expect(res.body.message).to.be.equal('Registro alterado com sucesso');\n});",
+                  "err": {},
+                  "uuid": "b0c9761f-4534-4a92-af09-4616372d1323",
+                  "parentUUID": "c0c494c7-490c-44c4-942a-31e4b2ed4494",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "3b6e9188-cb5a-4212-b03c-05403f656d28",
+                "0c6a7742-872c-4e35-8f5e-2b2ba7a02160",
+                "b0c9761f-4534-4a92-af09-4616372d1323"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 2322,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [
+            "7e5155c2-6bf5-4568-8fc0-a3a1e052afd8"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 339,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "167f5253-cb34-4743-83b7-2b22a65a3c17",
+      "title": "",
+      "fullFile": "cypress/integration/4.carrinhos.spec.js",
+      "file": "cypress/integration/4.carrinhos.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e2216dd6-a031-4cae-9e89-361c434089e4",
+          "title": "Casos de teste sobre a rota /Carrinhos da API Serverest",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Deve buscar todos os carrinhos cadastrados na serverest",
+              "fullTitle": "Casos de teste sobre a rota /Carrinhos da API Serverest Deve buscar todos os carrinhos cadastrados na serverest",
+              "timedOut": null,
+              "duration": 390,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_serverest.default.buscarCarrinhos().then(res => {\n  cy.contractValidation(res, \"get-carrinhos\", 200);\n  _validaServerest.default.validarBuscaDeCarrinhos(res);\n});",
+              "err": {},
+              "uuid": "084cd0ff-6e40-4f04-942a-5173e7b99677",
+              "parentUUID": "e2216dd6-a031-4cae-9e89-361c434089e4",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [
+            {
+              "uuid": "ab717d0b-9dd3-471f-befb-5255ed9d4ce9",
+              "title": "Logar com sucesso",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Deve Criar um novo carrinho com sucesso",
+                  "fullTitle": "Casos de teste sobre a rota /Carrinhos da API Serverest Logar com sucesso Deve Criar um novo carrinho com sucesso",
+                  "timedOut": null,
+                  "duration": 749,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "_serverest.default.cadastrarCarrinhoComSucesso().then(res => {\n  _validaServerest.default.validarCarrinhoComSucesso(res);\n});",
+                  "err": {},
+                  "uuid": "4cdb6454-5eba-4b7d-8e32-9c74ade97626",
+                  "parentUUID": "ab717d0b-9dd3-471f-befb-5255ed9d4ce9",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Deve deletar um carrinho com sucesso - Concluir Compra",
+                  "fullTitle": "Casos de teste sobre a rota /Carrinhos da API Serverest Logar com sucesso Deve deletar um carrinho com sucesso - Concluir Compra",
+                  "timedOut": null,
+                  "duration": 725,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "_serverest.default.deletarCarrinhoCadastrado_concluir().then(res => {\n  cy.contractValidation(res, \"delete-carrinhos-concluir-compra\", 200);\n  expect(res.body.message).to.be.equal('Registro excluído com sucesso'); // Código feito com participação de Regina Azzi e Vinivius Alexandre\n});",
+                  "err": {},
+                  "uuid": "8f6abdac-cfcc-4564-89f9-69769b377f9e",
+                  "parentUUID": "ab717d0b-9dd3-471f-befb-5255ed9d4ce9",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "4cdb6454-5eba-4b7d-8e32-9c74ade97626",
+                "8f6abdac-cfcc-4564-89f9-69769b377f9e"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 1474,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [
+            "084cd0ff-6e40-4f04-942a-5173e7b99677"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 390,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "28ce6ac6-5158-4f72-a64d-80b9ef79b461",
+      "title": "",
+      "fullFile": "cypress/integration/1.usuarios.spec.js",
+      "file": "cypress/integration/1.usuarios.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "01babd4f-1842-4015-8a6f-ce4228ab60fd",
+          "title": "Casos de teste sobre a rota /usuarios da API Serverest",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Deve buscar todos os usuarios cadastrados",
+              "fullTitle": "Casos de teste sobre a rota /usuarios da API Serverest Deve buscar todos os usuarios cadastrados",
+              "timedOut": null,
+              "duration": 944,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_serverest.default.buscarUsuarios().then(res => {\n  cy.contractValidation(res, \"get-usuarios\", 200);\n  _validaServerest.default.validarBuscaDeUsuarios(res);\n});",
+              "err": {},
+              "uuid": "e4b02157-6a49-443a-8dcf-1cfafa65eec8",
+              "parentUUID": "01babd4f-1842-4015-8a6f-ce4228ab60fd",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve cadastrar um usuário com sucesso",
+              "fullTitle": "Casos de teste sobre a rota /usuarios da API Serverest Deve cadastrar um usuário com sucesso",
+              "timedOut": null,
+              "duration": 253,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "let usuario = _factory.default.gerarUsuario();\n_serverest.default.cadastrarUsuario(usuario).then(res => {\n  cy.contractValidation(res, 'post-usuarios', 201);\n  expect(res.body.message).to.be.eq('Cadastro realizado com sucesso');\n  Cypress.env('idUsuarioCadastrado', res.body._id);\n});",
+              "err": {},
+              "uuid": "a62998d1-448e-493d-860f-3360ccf1466f",
+              "parentUUID": "01babd4f-1842-4015-8a6f-ce4228ab60fd",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve buscar usuários por Id",
+              "fullTitle": "Casos de teste sobre a rota /usuarios da API Serverest Deve buscar usuários por Id",
+              "timedOut": null,
+              "duration": 269,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_serverest.default.buscarUsuariosPorId().then(res => {\n  cy.contractValidation(res, \"get-usuarios_Id\", 200);\n  _validaServerest.default.validarBuscaDeUsuariosPorId(res);\n});",
+              "err": {},
+              "uuid": "922c10f2-402f-45f2-a5a7-7b7f21e83897",
+              "parentUUID": "01babd4f-1842-4015-8a6f-ce4228ab60fd",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve cadastrar um usuário sem sucesso",
+              "fullTitle": "Casos de teste sobre a rota /usuarios da API Serverest Deve cadastrar um usuário sem sucesso",
+              "timedOut": null,
+              "duration": 539,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_serverest.default.BuscarUsuarioExistente();\ncy.get('@usuarioExistente').then(usuario => {\n  _serverest.default.cadastrarUsuario(usuario).then(res => {\n    cy.contractValidation(res, 'post-usuarios', 400);\n    expect(res.body.message).to.be.eq('Este email já está sendo usado');\n  });\n});",
+              "err": {},
+              "uuid": "e53d8b68-5e2f-4651-b624-3ea8deae9c49",
+              "parentUUID": "01babd4f-1842-4015-8a6f-ce4228ab60fd",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "e4b02157-6a49-443a-8dcf-1cfafa65eec8",
+            "a62998d1-448e-493d-860f-3360ccf1466f",
+            "922c10f2-402f-45f2-a5a7-7b7f21e83897",
+            "e53d8b68-5e2f-4651-b624-3ea8deae9c49"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2005,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
