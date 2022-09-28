@@ -84,7 +84,7 @@ git push origin main:main
 
 + #### **<u>VS Code</u>** - Editor de código-fonte desenvolvido pela Microsoft para Windows, Linux e macOS.
 
-## Contribuidores
+## Contribuintes
 
 + Regina Azzi
 + Vinicius Alexandre
