@@ -66,10 +66,17 @@ git push origin main:main
 
 ## **Tecnologias Utilizadas**
 
-### **Construção do Código**
-
-+ ####  <u>Javascript</u> - Linguagem de programação interpretada estruturada, de script em alto nível com tipagem dinâmica fraca e multiparadigma.
-+ ####  <u>Node.js</u> - Software de código aberto, multiplataforma,permite a execução de códigos JavaScript fora de um navegador web.
++ Jira  Software  (para  gerenciamento  dos testes).
++ Zephyr  (extensão  do  Jira  para  criação  e execução de cenários de teste).
++ Pacote   Office   (para   elaboração   da documentação de testes).
++ Microsoft Teams (para as comunicações);E-mail 365 (para as formalizações por e-mail).
++ Visual  Studio  Code  (IDE  para  a  criação  do código da automação de testes).
++ Cypress (framework para a automação).
++ JavaScript  (linguagem  de  programação  para realizar a automação de testes).
++ Postman  (ferramenta  para  interagir  com  as rotas de API da aplicação).
++ GitHub  (para  versionamento  do  código  da automação).
++ Node.js (sofware que permite a execução do javascript).
++ Mochasome (Ferramenta para gerar Report).
 
 
 
